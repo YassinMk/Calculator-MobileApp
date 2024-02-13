@@ -6,14 +6,16 @@ This is a straightforward calculator app designed for Android devices. It featur
 
 - Basic arithmetic operations: add, subtract, multiply, divide.
 - Percentage calculations for quick references.
-- Clear and delete buttons for correcting entries.
+- Clear and delete buttons for correct entries.
 - Comma for decimal inputs.
 - Exit button to close the app quickly.
 - Clean and simple user interface with high contrast for easy visibility.
 
 ## Preview
 
-![Capture d'écran 2024-02-13 202724](https://github.com/YassinMk/BasicCalcApp-Mobile/assets/122708120/464f3852-abfb-4045-a94f-cc46e396ac88)
+<p align="center">
+  <img src="https://github.com/YassinMk/BasicCalcApp-Mobile/assets/122708120/c5a70022-ae38-42fa-b2d1-9400e6aad388" alt=" Calculator App Interface" width="250">
+</p>
 
 ## Installation
 
