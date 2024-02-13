@@ -13,9 +13,7 @@ This is a straightforward calculator app designed for Android devices. It featur
 
 ## Preview
 
-![Calculator App Interface](<link-to-your-image>)
-
-Replace `<link-to-your-image>` with the actual URL of your uploaded image on GitHub or any image hosting service.
+![Capture d'écran 2024-02-13 202724](https://github.com/YassinMk/BasicCalcApp-Mobile/assets/122708120/464f3852-abfb-4045-a94f-cc46e396ac88)
 
 ## Installation
 
@@ -32,8 +30,6 @@ Build the project in Android Studio and run it on an emulator or a real device.
 To perform calculations, simply tap the numerical buttons and select the desired operation. Your calculation will appear at the top of the display, and you can clear it at any time with the 'C' or 'DEL' buttons. To quit the app, tap the 'EXIT' button.
 ## Contact
 Project Link: https://github.com/YassinMk/BasicCalc-Mobile
-
-Project Link: https://github.com/yourusername/your-repo-name
 
 
 
