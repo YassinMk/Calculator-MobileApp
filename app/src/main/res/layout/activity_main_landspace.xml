@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="893dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="16dp"
+        android:gravity="right"
+        android:padding="10dp"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="895dp"
+        android:layout_height="47dp"
+        android:gravity="right"
+        android:paddingRight="20dp"
+        android:textColor="#8DD1F0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <LinearLayout
+        android:layout_width="902dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="192dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/sin"
+            android:layout_width="110dp"
+            android:layout_height="65dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="sin"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/cos"
+            android:layout_width="110dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="cos"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="120dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="tang"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/clearButtonLand"
+            android:layout_width="120dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_landscape_red_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="C"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="120dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_landscape_red_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="DEL"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/pourcentage"
+            android:layout_width="120dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="%"
+            android:textColor="#fff"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/division"
+            android:layout_width="120dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="/"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -191,5 +191,12 @@ public class MainActivity extends AppCompatActivity {
         resultTextView.setText(operand1.toString());
     }
 
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Intent intent = new Intent(this, MainActivityLandspace.class);
+            startActivity(intent);
+        }
+    }
 
 }
