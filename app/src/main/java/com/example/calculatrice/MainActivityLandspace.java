@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.util.Log;
+
 
 public class MainActivityLandspace extends AppCompatActivity {
 
@@ -69,6 +71,12 @@ public class MainActivityLandspace extends AppCompatActivity {
         Button commaButton = findViewById(R.id.Comma);
         Button exitButton = findViewById(R.id.exitButton);
 
+        if (getIntent().hasExtra("operand1")) {
+            operand1 = getIntent().getDoubleExtra("operand1", 0.0);
+            resultTextView.setText(operand1.toString());
+        }
+        pendingOperation = getIntent().getStringExtra("pendingOperation");
+
         View.OnClickListener numberListener = v -> {
             Button b = (Button) v;
             String currentText = newNumberTextView.getText().toString();
@@ -87,15 +95,31 @@ public class MainActivityLandspace extends AppCompatActivity {
             Button b = (Button) v;
             String function = b.getText().toString();
             String value = newNumberTextView.getText().toString();
-            if (value.isEmpty()) value = "0"; // Default to zero if empty
-            try {
-                double doubleValue = Double.parseDouble(value);
-                double result = performFunction(doubleValue, function);
-                newNumberTextView.setText(String.valueOf(result));
-            } catch (NumberFormatException e) {
-                newNumberTextView.setText("");
+            if (!value.isEmpty()) {
+                // If there's a value in newNumberTextView, use it
+                try {
+                    double doubleValue = Double.parseDouble(value);
+                    double result = performFunction(doubleValue, function);
+                    newNumberTextView.setText(String.valueOf(result)); // Set the result to newNumberTextView
+                } catch (NumberFormatException e) {
+                    newNumberTextView.setText(""); // Clear newNumberTextView if there's an error
+                }
+            } else {
+                // If newNumberTextView is empty, use the value from resultTextView
+                value = resultTextView.getText().toString();
+                if (!value.isEmpty()) {
+                    try {
+                        double doubleValue = Double.parseDouble(value);
+                        double result = performFunction(doubleValue, function);
+                        resultTextView.setText(String.valueOf(result)); // Set the result to resultTextView
+                    } catch (NumberFormatException e) {
+                        resultTextView.setText(""); // Clear resultTextView if there's an error
+                    }
+                }
             }
         };
+
+
 
         for (Button button : functionButtons) {
             button.setOnClickListener(functionListener);
@@ -223,6 +247,10 @@ public class MainActivityLandspace extends AppCompatActivity {
         super.onConfigurationChanged(newConfig);
         if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
             Intent intent = new Intent(this, MainActivity.class);
+            if (operand1 != null) {
+                intent.putExtra("operand1", operand1);
+            }
+            intent.putExtra("pendingOperation", pendingOperation);
             startActivity(intent);
         }
     }

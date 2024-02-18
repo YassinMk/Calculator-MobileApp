@@ -57,6 +57,12 @@ public class MainActivity extends AppCompatActivity {
         Button buttonMultiply = findViewById(R.id.multiplication);
         Button buttonDivide = findViewById(R.id.division);
 
+        if (getIntent().hasExtra("operand1")) {
+            operand1 = getIntent().getDoubleExtra("operand1", 0.0);
+            resultTextView.setText(operand1.toString());
+        }
+        pendingOperation = getIntent().getStringExtra("pendingOperation");
+
         View.OnClickListener numberListener = v -> {
             Button b = (Button) v;
             String currentText = newNumberTextView.getText().toString();
@@ -183,6 +189,10 @@ public class MainActivity extends AppCompatActivity {
         super.onConfigurationChanged(newConfig);
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             Intent intent = new Intent(this, MainActivityLandspace.class);
+            if (operand1 != null) {
+                intent.putExtra("operand1", operand1);
+            }
+            intent.putExtra("pendingOperation", pendingOperation);
             startActivity(intent);
         }
     }
