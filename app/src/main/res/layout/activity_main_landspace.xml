@@ -7,50 +7,143 @@
     android:background="@color/black"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="893dp"
-        android:layout_height="76dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="0dp"
         android:gravity="right"
-        android:padding="10dp"
+        android:padding="5dp"
         android:text="0"
         android:textColor="#FFFFFF"
-        android:textSize="48sp"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="895dp"
-        android:layout_height="47dp"
+        android:layout_width="893dp"
+        android:layout_height="40dp"
         android:gravity="right"
-        android:paddingRight="20dp"
+        android:paddingRight="5dp"
+        android:text=""
         android:textColor="#8DD1F0"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
-        android:layout_width="902dp"
-        android:layout_height="69dp"
-        android:layout_marginBottom="192dp"
+        android:id="@+id/linearLayout9"
+        android:layout_width="899dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/arcsin"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="arcsin"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/arcos"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="arcos"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/arctg"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="18dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="arctg"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/tree"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="3"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/two"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="2"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/one"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="1"
+            android:textColor="#fff"
+            android:textSize="30dp"
+            tools:ignore="DuplicateIds" />
+
+        <Button
+            android:id="@+id/minece"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="-"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="898dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="216dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/sin"
             android:layout_width="110dp"
-            android:layout_height="65dp"
+            android:layout_height="45dp"
             android:background="@drawable/round_landscape_def_button"
             android:gravity="center_vertical|center_horizontal"
             android:text="sin"
@@ -60,7 +153,7 @@
         <Button
             android:id="@+id/cos"
             android:layout_width="110dp"
-            android:layout_height="65dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:background="@drawable/round_landscape_def_button"
             android:gravity="center_vertical|center_horizontal"
@@ -69,10 +162,10 @@
             android:textSize="25dp" />
 
         <Button
-            android:id="@+id/clearButton"
-            android:layout_width="120dp"
-            android:layout_height="65dp"
-            android:layout_marginLeft="12dp"
+            android:id="@+id/tang"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="18dp"
             android:background="@drawable/round_landscape_def_button"
             android:gravity="center_vertical|center_horizontal"
             android:text="tang"
@@ -80,50 +173,283 @@
             android:textSize="25dp" />
 
         <Button
-            android:id="@+id/clearButtonLand"
-            android:layout_width="120dp"
-            android:layout_height="65dp"
-            android:layout_marginLeft="12dp"
+            android:id="@+id/clearButton"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="25dp"
             android:background="@drawable/round_landscape_red_button"
             android:gravity="center_vertical|center_horizontal"
             android:text="C"
             android:textColor="#FFFFFF"
-            android:textSize="30dp" />
+            android:textSize="24dp" />
 
         <Button
             android:id="@+id/deleteButton"
-            android:layout_width="120dp"
-            android:layout_height="65dp"
-            android:layout_marginLeft="12dp"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
             android:background="@drawable/round_landscape_red_button"
             android:gravity="center_vertical|center_horizontal"
             android:text="DEL"
             android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:textSize="24dp" />
 
         <Button
             android:id="@+id/pourcentage"
-            android:layout_width="120dp"
-            android:layout_height="65dp"
-            android:layout_marginLeft="12dp"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="25dp"
             android:background="@drawable/round_landscape_def_button"
             android:gravity="center_vertical|center_horizontal"
             android:text="%"
             android:textColor="#fff"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            tools:ignore="DuplicateIds" />
 
         <Button
-            android:id="@+id/division"
-            android:layout_width="120dp"
-            android:layout_height="65dp"
-            android:layout_marginLeft="12dp"
+            android:id="@+id/divisionLand"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
             android:background="@drawable/round_landscape_def_button"
             android:gravity="center_vertical|center_horizontal"
             android:text="/"
             android:textColor="#FFFFFF"
             android:textSize="30dp" />
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="898dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="160dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <Button
+            android:id="@+id/squared"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="x²"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/racine"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="√x "
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/inverse"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="18dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="1/x"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/nine"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="9"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/eight"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="8"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            tools:ignore="DuplicateIds" />
+
+        <Button
+            android:id="@+id/seven"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="7"
+            android:textColor="#fff"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/plus"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="898dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="105dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/expolanciel"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="exp"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/logarithme"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="ln "
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/Pi"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="18dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="π"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/sex"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="27dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="6"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/five"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="19dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="5"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/four"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="4"
+            android:textColor="#fff"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/multiplication"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="×"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="898dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/exitButton"
+            android:layout_width="360dp"
+            android:layout_height="45dp"
+            android:background="@drawable/round_landscape_red_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="EXIT"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/zero"
+            android:layout_width="235dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="27dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/Comma"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="26dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text=","
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/equale"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/round_landscape_def_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="="
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
     </LinearLayout>
 
 
