@@ -109,6 +109,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        percentageButton.setOnClickListener(v -> {
+            String currentText = newNumberTextView.getText().toString();
+            if (!currentText.isEmpty()) {
+                double val = Double.parseDouble(currentText) / 100;
+                newNumberTextView.setText(String.valueOf(val));
+            }
+        });
+
+        clearButton.setOnClickListener(v -> {
+            operand1 = null;
+            pendingOperation = "=";
+            resultTextView.setText("");
+            newNumberTextView.setText("0");
+        });
+
     }
 
     private void performOperation(Double value, String operation) {
@@ -140,26 +155,7 @@ public class MainActivity extends AppCompatActivity {
         resultTextView.setText(operand1.toString());
         newNumberTextView.setText("");
         pendingOperation = operation;
-
-        clearButton.setOnClickListener(v -> {
-            operand1 = null;
-            pendingOperation = "=";
-            resultTextView.setText("");
-            newNumberTextView.setText("0");
-        });
-
-        percentageButton.setOnClickListener(v -> {
-            String currentText = newNumberTextView.getText().toString();
-            if (!currentText.isEmpty()) {
-                double val = Double.parseDouble(currentText) / 100;
-                newNumberTextView.setText(String.valueOf(val));
-            }
-        });
-
-
-
         // Correcting Comma (Decimal) button functionality
-
 
         exitButton.setOnClickListener(v -> finish());
 
