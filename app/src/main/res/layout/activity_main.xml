@@ -24,12 +24,14 @@
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="411dp"
-        android:layout_height="33dp"
+        android:layout_width="405dp"
+        android:layout_height="59dp"
         android:gravity="right"
         android:paddingRight="20dp"
+        android:text="0"
         android:textColor="#8DD1F0"
-        android:textSize="20sp"
+
+        android:textSize="45dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />

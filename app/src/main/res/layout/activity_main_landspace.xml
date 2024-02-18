@@ -247,7 +247,7 @@
             android:layout_marginLeft="12dp"
             android:background="@drawable/round_landscape_def_button"
             android:gravity="center_vertical|center_horizontal"
-            android:text="√x "
+            android:text="√x"
             android:textColor="#FFFFFF"
             android:textSize="25dp" />
 
@@ -337,7 +337,7 @@
             android:layout_marginLeft="12dp"
             android:background="@drawable/round_landscape_def_button"
             android:gravity="center_vertical|center_horizontal"
-            android:text="ln "
+            android:text="ln"
             android:textColor="#FFFFFF"
             android:textSize="25dp" />
 
