@@ -14,7 +14,7 @@
         android:layout_height="57dp"
         android:layout_marginTop="0dp"
         android:gravity="right"
-        android:padding="5dp"
+        android:paddingRight="7dp"
         android:text="0"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
